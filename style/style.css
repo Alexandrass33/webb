@@ -1,0 +1,482 @@
+    /*Переменные*/
+:root {
+    --myfont: 'Playfair', serif; 
+    --mytext: center;
+    --color1:#80233A;
+    --color2:#F46387;
+    --colortext: black;
+}
+    /*сброс стилей*/
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+}
+input, textarea, button, select{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+       /*Размеры блоков*/
+#header{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+nav{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+}
+#nav2{
+    height:76px;
+    width: 100%;
+    background-color: white;
+}
+#content-header{
+     width: 1108px;
+     } 
+#content-nav{
+      width: 704px;
+      height:76px;
+}
+#content-header, #content-nav{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family:var(--myfont);
+    color: var( --colortext);
+}
+#content-nav a:link{
+    color: var(--colortext);
+}
+#content-nav a:visited{
+    color: var(--colortext);
+}
+#content-nav a:active{
+    color: var(--colortext);
+}
+#content-nav a:hover{
+    color: var(--color2);
+    text-decoration-line: underline;
+    text-decoration-color: var(--color2);
+    text-decoration-style:solid ;
+}
+#bg1{
+    width: 100%;
+    background-color: #FAFAFA;
+    height:41px ;
+}
+#bg2{
+    width: 100%;
+    background-color: #72408A;
+    height:56px ;
+}
+#but1:hover{
+    background-color: var(--color2);
+}
+       /* Корзина*/
+#count{
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        background-color: 72408A;
+        align-items:center;
+        color:white;
+        font-family:var(--myfont);
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -20px;
+}
+#bag{
+    width: 100px;
+    display: flex;
+    justify-content: baseline;
+}
+#bagcount{
+     display: block;
+     align-self: flex-start;
+}       
+hr{
+    border: #cacaca 1px solid;
+}
+#search{
+    width: 230px;
+    height: 35px;
+    border-bottom:#cacaca 1px solid;
+    background-image: url(../img/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#sub{
+    color:var(--colortext) ;
+    font-family:var(--myfont);
+    text-decoration-line: underline;
+    text-decoration-color: var(--colortext) ;
+    text-decoration-style:solid ;
+}
+      /*Слайдер*/
+
+      .slider {
+          position: relative;
+          height: 500px;
+          overflow: hidden;
+      }
+      .slider-slides {
+          position: relative;
+          height: 100%;
+          transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+          will-change: transform;
+      }
+      .slider-slide {
+          float: left;
+          height: 100%;
+          background-position: 50% 50%;
+          background-size: cover; 
+          
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+      }
+      .slider-slide button {
+          font-weight: 700;
+          font-size: 18px;
+          background: #80233A;
+          width: 224px;
+          height: 55px;
+          border: none;
+          color: #fff;
+          text-align: center;
+      }
+      .slider-dots {
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          bottom: 20px;
+          left: 920px;
+          width: 3%/*calc(100% - 40px)*/;
+      }
+      .slider-dot, 
+      .slider-indicator {
+          display: block;
+          margin: 0 5px;
+          height: 10px;
+          width: 10px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 50px;
+          cursor: pointer;
+      }
+      .slider-indicator {
+          position: absolute;
+          background: white;
+      }
+      .slider-indicator-left {
+          transition: left 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15), right 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+      }
+      .slider-indicator-right {
+          transition: left 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15), right 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+      }
+      #slid1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      #slid1 h2 {
+          font-size: 74px;
+          margin-top: 120px;
+          margin-bottom: 5px;
+      }
+      #slid1 h4 {
+          font-size: 46px;
+          font-weight: 400;
+          margin-bottom: 30px;
+      }
+      #slid2 div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #slid2 h2 {
+        font-size: 74px;
+        margin-top: 120px;
+        margin-bottom: 5px;
+      }
+      #slid2 h3 {
+        font-size: 46px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+      #slid2 p {
+          font-weight: 500;
+          font-size: 24px;
+          margin-bottom: 45px;
+      }
+      #slid3 div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #slid3 h2 {
+        font-size: 74px;
+        margin-top: 120px;
+        margin-bottom: 5px;
+      }
+      #slid3 h3 {
+        font-size: 46px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+      #slid3 p {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 47px;
+      }
+    /*Каталог товаров*/
+#cat{
+    margin-top: 90px;
+    width: 100%;
+    background-color: white;
+    }
+#contentcat{
+    width: 1113px;
+    margin-left: auto;
+    margin-right:auto ;
+    display: flex;
+    justify-content: start;
+    gap:10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.butcat{
+    width: 63px;
+    height: 63px;
+    background-image:url(../img/Bag1.svg);
+    background-repeat: no-repeat;
+}
+.cattext{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 260px;
+    height: 84px;
+}
+.titlecat h3{
+    color: var(--myfont);
+    font-size: 16px;
+    font-family:var(--myfont);
+}
+.titlecat h4{
+    color: #cacaca;
+    font-size: 14px;
+    font-family:var(--myfont);
+}
+#cat h1{
+    font-size: 35px;
+    font-family: var(--myfont);
+    color: var(--mytext);
+    text-align: center;
+    margin-bottom: 64px;
+}
+#cat input{
+    background: white;
+    width:224px;
+    height:55px;
+    color: var(--color1);
+    font-family:var(--myfont);
+    font-size: 18px;
+    border: #80233A solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+#but2:hover{
+    background-color: var(--color2);
+    color: white;
+}
+.cart{
+    padding: 0px;
+    width: 255px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.cart:hover{
+    box-shadow: 0px 0px 20px #cacaca;
+}
+.butcat{
+    transition: background-image 0.5s ease-out;
+}
+.butcat:hover{
+    background-image:url(../img/Bag.svg);
+}
+    /*Вызов формы*/
+#form{
+    background-image:url(../img/BG1.jpg) ;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 90px;
+}
+#contentform{
+    width: 505px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 58px;
+}
+#contentform h1{
+    color: white; 
+    font-family: var(--myfont);
+    font-size: 35px;
+}
+#contentform input{
+    background-color:var(--color2) ;
+    width:224px;
+    height:55px;
+    color: white;
+    font-family:var(--myfont);
+    font-size: 18px;
+    margin-top: 260px;
+}
+#but3:hover{
+    background-color: var(--color1);
+}
+     /*О нас */
+#about{
+    background-color: white;
+    width: 100%;
+    margin-top: 90px;
+}
+#contentabout{
+    width: 1108px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+#abouttext{
+    padding-top: 115px;
+}
+#abouttext h1{
+    font-size: 35px;
+    font-family: var(--myfont);
+    color: var(--mytext);
+    text-align: left;
+}
+#abouttext p{
+    font-size: 18px;
+    font-family: var(--myfont);
+    color: var(--mytext);
+    text-align: left;
+    padding-top: 30px;
+}
+    /*подвал*/
+footer{
+    margin-top: 90px;
+    background-color: #F9F9F9;
+    width: 100%;
+    height: 400px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+}
+#contentfooter{
+    display: flex;
+    width: 1163px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer hr{
+    width: 1163px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+ul{
+    list-style: none;
+    line-height: 250%;
+    font-size: 16px;
+    font-family: var(--myfont);
+    color: var(--colortext);
+}
+#emailimg, #geoimg{
+    vertical-align: middle;
+    margin-right: 7px;
+}
+     /*Модальное окно*/
+#modal{
+        width:656px;
+        height: 420px;
+        background-color: white;
+        border: black solid 1px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+        font-family: var(--myfont);
+        color:var(--mytext) ;
+        padding-top:63px ;
+        box-sizing: border-box;
+}   
+#modal form{
+        width: 500px;
+        height: 282px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+}
+#modal form .block{
+        border:#7E7373 solid 1px ;
+        width: 500px;
+        height: 35px;
+} 
+#butmod{
+        background-color: var(--color1);
+        color: white;
+}
+#butmod:hover{
+    background-color: var(--color2);
+}
+#modalback{
+        width: 100%;
+        height: 100%;
+        background: rgba(128, 35, 58, 0.7);
+        top: 0px;
+        padding-top: 100px;
+        display: none;
+        position: fixed;
+        animation: modal 2s ease;
+}
+
+@keyframes modal{
+    form{background-color: #F46387;}
+    30%{background-color: #80233A;}
+    to{background-color: rgba(128, 35, 58, 0.7);}
+}
+.show{
+    animation: modal 1s ease;
+}
+@media (max-width:1164px){
+    #contentcat{
+        width: 853px;
+    }
+    #contentfooter{
+        width: 853px;
+    }
+    #contentabout{
+    width: 853px;
+    }
+}
